@@ -32,7 +32,7 @@ export default function Cards() {
                 <a
                   href="#"
                   className="btn btn-dark"
-                  style={{ color: "#F4C2C2" }}
+                  style={{ color: "#FFD1DC" }}
                 >
                   Learn More
                 </a>
@@ -57,7 +57,7 @@ export default function Cards() {
                 <a
                   href="#"
                   className="btn btn-dark"
-                  style={{ color: "#F4C2C2" }}
+                  style={{ color: "#FFD1DC" }}
                 >
                   Learn More
                 </a>
@@ -82,7 +82,7 @@ export default function Cards() {
                 <a
                   href="#"
                   className="btn btn-dark"
-                  style={{ color: "#F4C2C2" }}
+                  style={{ color: "#FFD1DC" }}
                 >
                   Learn More
                 </a>

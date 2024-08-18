@@ -188,7 +188,7 @@ export default function Footer() {
               </form>
             </div>
           </div>
-          <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <div className="d-flex flex-column flex-sm-row justify-content-between my-4 border-top">
             <p style={{ color: "#F4C2C2" }}>
               © 2024 CherryBlossomCo, Inc. All rights reserved.
             </p>

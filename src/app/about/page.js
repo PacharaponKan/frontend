@@ -1,76 +1,55 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "../component/navbar";
+import Image from "next/image";
 
-export default function ComingSoon() {
+export default function About() {
   return (
-    <><Nav /><div style={styles.container}>
-      <h1 style={styles.title}>COMING SOON</h1>
-      <p style={styles.text}>
-        We will be celebrating the launch of our new site very soon!
-      </p>
-      <button style={styles.button}>Notify Me!</button>
-      <footer style={styles.footer}>
-        <p>© 2023 by "Coming Soon". Proudly created with Next.js</p>
-        <div style={styles.socials}>
-          <a href="#" style={styles.socialIcon}>Facebook</a>
-          <a href="#" style={styles.socialIcon}>Twitter</a>
-          <a href="#" style={styles.socialIcon}>Instagram</a>
+    <>
+    <br />
+    <br />
+    <div style={{ backgroundColor: '#FFD1DC', color: '#212529', padding: '50px' }}>
+      <div className="container">
+        <h1 className="text-center mb-5">About Us</h1>
+        <div className="row">
+          <div className="col-md-6">
+            <img
+              src="/assets/img/Logo3.png"
+              alt="About Us"
+              className="img-fluid mb-4"
+            />
+          </div>
+          <div className="col-md-6">
+            <h2>Our Mission</h2>
+            <p>
+              At Cherry Blossom co., our mission is to provide
+              unforgettable travel experiences. We believe that travel is more
+              than just visiting places; it's about immersing yourself in new
+              cultures, meeting new people, and creating memories that will last
+              a lifetime.
+            </p>
+            <h2>Our Values</h2>
+            <p>
+              We are committed to sustainable travel, ensuring that the
+              destinations we love are preserved for future generations. We
+              prioritize responsible tourism, respecting local communities, and
+              minimizing our environmental impact.
+            </p>
+            <h2>Contact Us</h2>
+            <p>
+              Have questions or want to learn more? Contact us at{' '}
+              <a href="mailto:info@yourtravelcompany.com">info@CherryBlossom.com</a>.
+            </p>
+            <button
+              className="btn"
+              style={{ backgroundColor: '#212529', color: '#F4C2C2' }}
+            >
+              Learn More
+            </button>
+          </div>
         </div>
-      </footer>
-    </div></>
+      </div>
+    </div>
+    </>
   );
 }
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    textAlign: 'center',
-    backgroundImage: 'url("/asset/img/Bg1.png")', // Update with your image path
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    position: 'relative',
-    color: '#fff', // Ensure text is visible on the background
-  },
-  title: {
-    fontSize: '4rem',
-    fontWeight: 'bold',
-    margin: '0',
-  },
-  text: {
-    marginTop: '10px',
-    fontSize: '1.25rem',
-  },
-  button: {
-    marginTop: '20px',
-    padding: '10px 20px',
-    fontSize: '1rem',
-    color: '#fff',
-    backgroundColor: '#00c4cc',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-  footer: {
-    position: 'absolute',
-    bottom: '20px',
-    textAlign: 'center',
-    width: '100%',
-  },
-  socials: {
-    marginTop: '10px',
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-  },
-  socialIcon: {
-    color: '#fff', // Update to white for better contrast
-    textDecoration: 'none',
-  },
-};
-

@@ -1,76 +1,98 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function ComingSoon() {
+export default function Contact() {
   return (
     <>
-    <div style={styles.container}>
-      <h1 style={styles.title}>COMING SOON</h1>
-      <p style={styles.text}>
-        We will be celebrating the launch of our new site very soon!
-      </p>
-      <button style={styles.button}>Notify Me!</button>
-      <footer style={styles.footer}>
-        <p>© 2023 by "Coming Soon". Proudly created with Next.js</p>
-        <div style={styles.socials}>
-          <a href="#" style={styles.socialIcon}>Facebook</a>
-          <a href="#" style={styles.socialIcon}>Twitter</a>
-          <a href="#" style={styles.socialIcon}>Instagram</a>
+      {/* Top Padding */}
+      <div className="pt-5"></div>
+      <div
+        style={{
+          backgroundColor: '#FFD1DC',
+          color: '#212529',
+          padding: '30px',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        {/* Unified Container and Card Section */}
+        <div
+          className="card mt-5 shadow-sm p-4 bg-dark text-light"
+          style={{
+            borderRadius: '10px',
+            maxWidth: '800px',
+            width: '100%',
+          }}
+        >
+          <div className="row">
+            {/* Map and Info Section */}
+            <div className="col-lg-6 col-md-12 mb-4">
+              <div className="h-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.303117306252!2d98.9813444!3d18.7929024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9a71d80adf%3A0xe41f657fc5052416!2sChiang%20Mai%20Technical%20College!5e0!3m2!1sen!2sth!4v1692272823159!5m2!1sen!2sth"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Chiang Mai Technical College"
+                ></iframe>
+                <div className="mt-4">
+                  <p><strong>Location:</strong>9 Wiang Kaew Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200</p>
+                  <p><strong>Email:</strong> CherryBlossom@gmail.com</p>
+                  <p><strong>Phone:</strong> +1-202-555-0158</p>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <a href="#" className="me-3">
+                    <i className="bi bi-facebook" style={{ fontSize: "1.5rem", color: '#FFD1DC' }}></i>
+                  </a>
+                  <a href="#" className="me-3">
+                    <i className="bi bi-twitter" style={{ fontSize: "1.5rem", color: '#FFD1DC' }}></i>
+                  </a>
+                  <a href="#" className="me-3">
+                    <i className="bi bi-tiktok" style={{ fontSize: "1.5rem", color: '#FFD1DC' }}></i>
+                  </a>
+                  <a href="#">
+                    <i className="bi bi-youtube" style={{ fontSize: "1.5rem", color: '#FFD1DC' }}></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form Section */}
+            <div className="col-lg-6 col-md-12">
+              <div className="h-100">
+                <h3 className="mb-4">Let's Talk</h3>
+                <form>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" className="form-control" id="name" placeholder="Enter Your First Name" />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">Email</label>
+                    <input type="email" className="form-control" id="email" placeholder="Enter Your Email Here" />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="phone" className="form-label">Phone Number</label>
+                    <input type="tel" className="form-control" id="phone" placeholder="Phone Number" />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="comment" className="form-label">Comment</label>
+                    <textarea className="form-control" id="comment" rows="3" placeholder="Comment"></textarea>
+                  </div>
+                  <button 
+                    type="submit" 
+                    className="btn w-100" 
+                    style={{ backgroundColor: '#FFD1DC', color: '#212529' }}>
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div></>
+      </div>
+    </>
   );
 }
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    textAlign: 'center',
-    backgroundImage: 'url("/asset/img/Bg1.png")', // Update with your image path
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    position: 'relative',
-    color: '#fff', // Ensure text is visible on the background
-  },
-  title: {
-    fontSize: '4rem',
-    fontWeight: 'bold',
-    margin: '0',
-  },
-  text: {
-    marginTop: '10px',
-    fontSize: '1.25rem',
-  },
-  button: {
-    marginTop: '20px',
-    padding: '10px 20px',
-    fontSize: '1rem',
-    color: '#fff',
-    backgroundColor: '#00c4cc',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-  footer: {
-    position: 'absolute',
-    bottom: '20px',
-    textAlign: 'center',
-    width: '100%',
-  },
-  socials: {
-    marginTop: '10px',
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-  },
-  socialIcon: {
-    color: '#fff', // Update to white for better contrast
-    textDecoration: 'none',
-  },
-};
-

@@ -105,24 +105,3 @@ a {
     color-scheme: dark;
   }
 }
-
-.btn-custom {
-  background-color: #ffb7c5;
-  border-color: #ffb7c5;
-  color: white;
-}
-
-.btn-custom:hover {
-  background-color: #e699a7;
-  border-color: #e699a7;
-}
-
-.btn-outline-custom {
-  border-color: #ffb7c5;
-  color: #ffb7c5;
-}
-
-.btn-outline-custom:hover {
-  background-color: #ffb7c5;
-  color: white;
-}
