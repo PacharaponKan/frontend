@@ -1,0 +1,33 @@
+.serviceBox {
+  background-color: #212529;
+  border: 1px solid #FFD1DC;
+  border-radius: 5px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.serviceBox:hover {
+  transform: translateY(-5px);
+}
+
+.serviceBox i {
+  font-size: 3rem;
+  color: #FFD1DC;
+}
+
+.serviceBox h4 {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.serviceBox p {
+  font-size: 0.95rem;
+  color: #FFD1DC;
+  text-align: center;
+}

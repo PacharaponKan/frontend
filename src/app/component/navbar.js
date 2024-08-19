@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
@@ -33,64 +34,10 @@ export default function Nav() {
                 About
               </a>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ color: "#F4C2C2" }}
-              >
+            <li className="nav-item">
+              <a className="nav-link" href="/service" style={{ color: "#F4C2C2" }}>
                 Service
               </a>
-              <ul className="dropdown-menu dropdown-menu-dark">
-                <li>
-                  <h6 className="dropdown-header" style={{ color: "#F4C2C2" }}>Service Categories</h6>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#" style={{ color: "#F4C2C2" }}>
-                    Main Services
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#" style={{ color: "#F4C2C2" }}>
-                    Additional Services
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <h6 className="dropdown-header" style={{ color: "#F4C2C2" }}>Support and Help</h6>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#" style={{ color: "#F4C2C2" }}>
-                    FAQs
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#" style={{ color: "#F4C2C2" }}>
-                    User Manuals
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <h6 className="dropdown-header" style={{ color: "#F4C2C2" }}>Promotions</h6>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#" style={{ color: "#F4C2C2" }}>
-                    Special Offers
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#" style={{ color: "#F4C2C2" }}>
-                    Loyalty Program
-                  </a>
-                </li>
-              </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/contact" style={{ color: "#F4C2C2" }}>
@@ -98,30 +45,53 @@ export default function Nav() {
               </a>
             </li>
           </ul>
-          <div className="d-flex mx-2" style={{ gap: "10px" }}>
+          <div className="d-flex align-items-center" style={{ gap: "10px" }}>
             <Link href="/signup" passHref>
               <button
-                className="btn"
-                type="submit"
+                className="btn btn-outline-light"
+                type="button"
                 style={{
                   color: "#F4C2C2",
-                  backgroundColor: "transparent",
                   borderColor: "#F4C2C2",
+                  borderRadius: "20px",
+                  padding: "5px 20px",
+                  fontWeight: "500",
+                  transition: "background-color 0.3s ease, color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#F4C2C2";
+                  e.target.style.color = "black";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "transparent";
+                  e.target.style.color = "#F4C2C2";
                 }}
               >
-                SignUp
+                Sign Up
               </button>
             </Link>
             <Link href="/signin" passHref>
               <button
                 className="btn"
-                type="submit"
+                type="button"
                 style={{
-                  color: "black",
+                  color: "#000",
                   backgroundColor: "#F4C2C2",
+                  borderRadius: "20px",
+                  padding: "5px 20px",
+                  fontWeight: "500",
+                  transition: "background-color 0.3s ease, color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#212325";
+                  e.target.style.color = "#F4C2C2";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#F4C2C2";
+                  e.target.style.color = "#212325";
                 }}
               >
-                SignIn
+                Sign In
               </button>
             </Link>
           </div>
